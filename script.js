@@ -1,10 +1,17 @@
 
 
-var map = L.map("map").setView([51.505, -0.09], 13);
+var map = L.map("map").setView([-7.8014, 110.3648], 16);
+
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
+
+L.marker([-7.8014, 110.3648])
+  .addTo(map)
+  .bindPopup("<b>Titik Nol Kilometer Yogyakarta</b><br>Yogyakarta, Indonesia.")
+  .openPopup();
+
 
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
