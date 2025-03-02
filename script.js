@@ -1,19 +1,4 @@
-function toggleNav() {
-  var nav = document.getElementById("navbarNav");
-  var toggle = document.getElementById("toggleMenu");
-  nav.classList.toggle("show");
-  toggle.classList.toggle("active");
-}
 
-document.addEventListener("click", function (event) {
-  var nav = document.getElementById("navbarNav");
-  var toggle = document.getElementById("toggleMenu");
-
-  if (!nav.contains(event.target) && !toggle.contains(event.target)) {
-    nav.classList.remove("show");
-    toggle.classList.remove("active");
-  }
-});
 
 var map = L.map("map").setView([51.505, -0.09], 13);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
